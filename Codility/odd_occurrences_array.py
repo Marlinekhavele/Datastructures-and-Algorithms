@@ -27,3 +27,10 @@
 # N is an odd integer within the range [1..1,000,000];
 # each element of array A is an integer within the range [1..1,000,000,000];
 # all but one of the values in A occur an even number of times.
+#O(N) or O(N*log(N))
+
+def solution(A):
+    odd = 0
+    for i in A:
+        odd ^= i
+    return odd
