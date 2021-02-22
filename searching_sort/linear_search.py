@@ -1,0 +1,7 @@
+def linearSearch(listData,value):
+    index = 0
+    while(index < len(listData)and listData[index] < value):
+        index ++;
+    if(index >= len(listData or listData[index]!=value)):
+        return -1
+    return index
