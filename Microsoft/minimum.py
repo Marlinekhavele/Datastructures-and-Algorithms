@@ -25,3 +25,26 @@
 # Output: 2
 # Explanation: You can delete both 'c's resulting in the good string "eabaab".
 # Note that we only care about characters that are still in the string at the end (i.e. frequency of 0 is ignored).
+
+
+from collections import Counter
+class Solution(object):
+    def minDeletions(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        c=Counter(s)
+        d={}
+        cost=0
+        print(c)
+        for i in c.items():
+            if i[1] in d:
+                a=i[1]
+                while a in d and a>0:
+                    a-=1
+                    cost+=1
+                d[a]=0
+            else:
+                d[i[1]]=0
+        return cost
