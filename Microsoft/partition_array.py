@@ -1,8 +1,7 @@
-# Give you one sorted array, please put them into n buckets, we need to ensure we get n sub array with approximately equal weights.
-# Example;
-# input {1, 2, 3, 4, 5} n = 3
-# output [[[5],[1,4],[2,3]];
-
+"""Give you one sorted array, please put them into n buckets, we need to ensure we get n sub array with approximately equal weights.
+Example;
+input {1, 2, 3, 4, 5} n = 3
+output [[[5],[1,4],[2,3]];
 
 
 Python Solution: T(C) => O(N Log (N)) (For Heap => O(N Log(K)) + For Sorting => O(N Log(N))
@@ -10,6 +9,7 @@ Python Solution: T(C) => O(N Log (N)) (For Heap => O(N Log(K)) + For Sorting => 
 where
 N is the total number of elements
 K is the total number of subsets we need to partition
+"""
 
 import heapq
 
